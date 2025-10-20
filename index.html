@@ -1,0 +1,2929 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Social Seek - 日本最大級TikTok Shopコミュニティ。ショート動画×商品アフィリエイト×ライブコマースで副業収入を実現">
+    <meta property="og:title" content="Social Seek - 国内初! 日本最大レベル TikTok Shopコミュニティ">
+    <meta property="og:description" content="TikTok Shopで副業収入を実現！期間限定30名枠のみ完全無料開放中">
+    <meta property="og:image" content="https://socialseek.jp/ogp-image.jpg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Social Seek - 国内初! 日本最大レベル TikTok Shopコミュニティ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans JP', sans-serif;
+            overflow-x: hidden;
+            background: #000000;
+        }
+
+        /* TikTok Color Variables */
+        :root {
+            --tiktok-red: #FE2C55;
+            --tiktok-cyan: #25F4EE;
+            --tiktok-black: #000000;
+            --tiktok-white: #FFFFFF;
+            --tiktok-pink: #FF0050;
+            --gradient-gold: linear-gradient(135deg, #FFD700, #FFA500);
+        }
+
+        /* Premium Animations */
+        @keyframes glitch {
+            0%, 100% { 
+                text-shadow: 2px 0 var(--tiktok-cyan), -2px 0 var(--tiktok-red);
+            }
+            25% { 
+                text-shadow: -2px 0 var(--tiktok-cyan), 2px 0 var(--tiktok-red);
+            }
+            50% { 
+                text-shadow: 2px 0 var(--tiktok-red), -2px 0 var(--tiktok-cyan);
+            }
+        }
+
+        @keyframes neonPulse {
+            0%, 100% {
+                box-shadow: 0 0 20px var(--tiktok-cyan),
+                           0 0 40px var(--tiktok-cyan),
+                           0 0 60px var(--tiktok-cyan);
+            }
+            50% {
+                box-shadow: 0 0 30px var(--tiktok-red),
+                           0 0 50px var(--tiktok-red),
+                           0 0 70px var(--tiktok-red);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes floatUpDown {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes countUp {
+            from { opacity: 0; transform: scale(0.5); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(0.8);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(254, 44, 85, 0.5),
+                           0 0 40px rgba(254, 44, 85, 0.3); 
+            }
+            50% { 
+                box-shadow: 0 0 40px rgba(254, 44, 85, 0.8),
+                           0 0 60px rgba(254, 44, 85, 0.5); 
+            }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -1000px 0; }
+            100% { background-position: 1000px 0; }
+        }
+
+        @keyframes cyanPulse {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(37, 244, 238, 0.5);
+            }
+            50% { 
+                transform: scale(1.05);
+                box-shadow: 0 0 20px rgba(37, 244, 238, 0.8);
+            }
+        }
+
+        @keyframes borderGlow {
+            0%, 100% {
+                border-color: var(--tiktok-cyan);
+                box-shadow: 0 0 5px rgba(37, 244, 238, 0.5);
+            }
+            50% {
+                border-color: #00f2ea;
+                box-shadow: 0 0 15px rgba(37, 244, 238, 0.8);
+            }
+        }
+
+        /* Notification Bar */
+        .notification-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(90deg, var(--tiktok-red), var(--tiktok-pink));
+            color: white;
+            padding: 10px;
+            text-align: center;
+            z-index: 1001;
+            font-weight: 700;
+            font-size: 14px;
+            animation: slideInLeft 0.5s ease-out;
+        }
+
+        .notification-bar span {
+            animation: blink 2s infinite;
+        }
+
+        /* Floating Action Button */
+        .floating-cta {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            animation: floatUpDown 3s ease-in-out infinite;
+        }
+
+        .floating-cta-button {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--tiktok-red), var(--tiktok-pink));
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 10px 30px rgba(254, 44, 85, 0.5);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .floating-cta-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            border-radius: 50px;
+            border: 2px solid var(--tiktok-red);
+            animation: ripple 2s infinite;
+        }
+
+        .floating-cta-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(254, 44, 85, 0.7);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            background: var(--tiktok-black);
+            position: relative;
+            overflow: hidden;
+            padding-top: 50px;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(254, 44, 85, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(37, 244, 238, 0.1) 0%, transparent 50%);
+        }
+
+        /* Sparkle Effects */
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--tiktok-cyan);
+            border-radius: 50%;
+            animation: sparkle 3s linear infinite;
+        }
+
+        .sparkle:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+        .sparkle:nth-child(2) { top: 20%; left: 80%; animation-delay: 0.5s; }
+        .sparkle:nth-child(3) { top: 60%; left: 25%; animation-delay: 1s; }
+        .sparkle:nth-child(4) { top: 80%; left: 70%; animation-delay: 1.5s; }
+        .sparkle:nth-child(5) { top: 40%; left: 50%; animation-delay: 2s; }
+
+        .hero-bg-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.05;
+            background-image: repeating-linear-gradient(
+                45deg,
+                var(--tiktok-red) 0,
+                var(--tiktok-red) 1px,
+                transparent 1px,
+                transparent 15px
+            );
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Main Title with TikTok Style */
+        .main-title-wrapper {
+            padding-top: 80px;
+            margin-bottom: 40px;
+            animation: slideInLeft 1s ease-out;
+        }
+
+        .main-title {
+            display: inline-block;
+            position: relative;
+        }
+
+        .title-box {
+            background: linear-gradient(135deg, var(--tiktok-red), var(--tiktok-pink));
+            padding: 40px 60px;
+            border-radius: 0;
+            position: relative;
+            transform: skew(-5deg);
+            box-shadow: 
+                10px 10px 0 var(--tiktok-cyan),
+                20px 20px 40px rgba(0,0,0,0.5);
+        }
+
+        .title-box h1 {
+            font-size: clamp(24px, 4vw, 48px);
+            font-weight: 900;
+            color: var(--tiktok-white);
+            transform: skew(5deg);
+            letter-spacing: -1px;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.3);
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .title-accent {
+            font-size: clamp(18px, 3vw, 32px);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .title-main {
+            font-size: clamp(32px, 5vw, 64px);
+            display: block;
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--tiktok-cyan);
+            border-radius: 10px;
+            padding: 10px 20px;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            animation: borderGlow 3s infinite;
+        }
+
+        .trust-badge:hover {
+            background: rgba(37, 244, 238, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(37, 244, 238, 0.3);
+        }
+
+        .trust-badge-icon {
+            width: 20px;
+            height: 20px;
+            fill: var(--tiktok-cyan);
+        }
+
+        /* Countdown Timer */
+        .countdown-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid var(--tiktok-red);
+            border-radius: 20px;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 600px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .countdown-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(254, 44, 85, 0.1), transparent);
+            animation: slideInLeft 3s infinite;
+        }
+
+        .countdown-title {
+            color: var(--tiktok-cyan);
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .countdown-boxes {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .countdown-box {
+            background: var(--tiktok-black);
+            border: 2px solid var(--tiktok-cyan);
+            border-radius: 10px;
+            padding: 15px;
+            min-width: 80px;
+        }
+
+        .countdown-number {
+            color: var(--tiktok-red);
+            font-size: 32px;
+            font-weight: 900;
+            display: block;
+        }
+
+        .countdown-label {
+            color: var(--tiktok-white);
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        /* Glitch Effect for Title */
+        .glitch-text {
+            position: relative;
+            animation: glitch 2s infinite;
+        }
+
+        /* Subtitle with TikTok Style */
+        .subtitle-container {
+            margin-bottom: 50px;
+            animation: slideInRight 1s ease-out 0.2s both;
+        }
+
+        .subtitle-box {
+            background: var(--tiktok-white);
+            padding: 50px;
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            border: 4px solid var(--tiktok-black);
+            box-shadow: 
+                -10px -10px 0 var(--tiktok-cyan),
+                10px 10px 0 var(--tiktok-red),
+                0 0 60px rgba(254, 44, 85, 0.3);
+        }
+
+        .subtitle-box::before,
+        .subtitle-box::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: var(--tiktok-red);
+        }
+
+        .subtitle-box::before {
+            top: -15px;
+            left: -15px;
+            background: linear-gradient(45deg, var(--tiktok-red), var(--tiktok-pink));
+        }
+
+        .subtitle-box::after {
+            bottom: -15px;
+            right: -15px;
+            background: linear-gradient(45deg, var(--tiktok-cyan), #00f2ea);
+        }
+
+        .subtitle-text {
+            font-size: clamp(24px, 3.5vw, 40px);
+            font-weight: 800;
+            color: var(--tiktok-black);
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+
+        .subtitle-sub {
+            font-size: clamp(18px, 2.5vw, 24px);
+            color: #333;
+            font-weight: 700;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .subtitle-method {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .method-tag {
+            background: linear-gradient(135deg, var(--tiktok-red), var(--tiktok-pink));
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 16px;
+            box-shadow: 0 5px 15px rgba(254, 44, 85, 0.3);
+            animation: floatUpDown 3s ease-in-out infinite;
+        }
+
+        .method-tag:nth-child(2) { animation-delay: 0.2s; }
+        .method-tag:nth-child(3) { animation-delay: 0.4s; }
+
+        .highlight-red {
+            color: var(--tiktok-red);
+            font-weight: 900;
+            position: relative;
+            display: inline-block;
+        }
+
+        .highlight-red::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--tiktok-cyan), var(--tiktok-red));
+        }
+
+        /* Statistics Section */
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 50px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-box {
+            text-align: center;
+            animation: countUp 1s ease-out;
+        }
+
+        .stat-number {
+            font-size: clamp(36px, 4vw, 56px);
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--tiktok-cyan), var(--tiktok-red));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: var(--tiktok-white);
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        /* Icon Row with TikTok Animation */
+        .icon-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .icon-wrapper {
+            animation: floatUpDown 3s ease-in-out infinite;
+        }
+
+        .icon-wrapper:nth-child(2) { animation-delay: 0.3s; }
+        .icon-wrapper:nth-child(3) { animation-delay: 0.6s; }
+
+        .icon-circle {
+            width: 90px;
+            height: 90px;
+            background: var(--tiktok-black);
+            border: 3px solid var(--tiktok-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: all 0.3s ease;
+            animation: neonPulse 2s infinite;
+        }
+
+        .icon-circle:hover {
+            background: var(--tiktok-red);
+            transform: scale(1.1) rotate(10deg);
+        }
+
+        .icon-circle svg {
+            width: 45px;
+            height: 45px;
+            stroke: var(--tiktok-cyan);
+            stroke-width: 3;
+            filter: drop-shadow(0 0 10px var(--tiktok-cyan));
+        }
+
+        .icon-circle:hover svg {
+            stroke: var(--tiktok-white);
+        }
+
+        /* Brand Name TikTok Style */
+        .brand-section {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .brand-wrapper {
+            display: inline-block;
+            position: relative;
+            animation: slideInLeft 1s ease-out 0.4s both;
+        }
+
+        .brand-box {
+            background: var(--tiktok-black);
+            border: 4px solid var(--tiktok-white);
+            padding: 40px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .brand-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                var(--tiktok-cyan), 
+                transparent);
+            animation: slideInLeft 3s infinite;
+        }
+
+        .brand-name {
+            font-size: clamp(48px, 6vw, 80px);
+            font-weight: 900;
+            background: linear-gradient(90deg, 
+                var(--tiktok-red), 
+                var(--tiktok-pink), 
+                var(--tiktok-cyan));
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease infinite;
+            letter-spacing: 2px;
+        }
+
+        /* CTA Button TikTok Style */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: linear-gradient(135deg, var(--tiktok-red), var(--tiktok-pink));
+            color: var(--tiktok-white);
+            font-size: clamp(20px, 2.5vw, 28px);
+            font-weight: 900;
+            padding: 25px 60px;
+            text-decoration: none;
+            position: relative;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            box-shadow: 
+                0 10px 0 #c4002d,
+                0 10px 30px rgba(254, 44, 85, 0.5);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, 
+                transparent 30%, 
+                rgba(255,255,255,0.3) 50%, 
+                transparent 70%);
+            transform: translateX(-100%);
+            transition: transform 0.6s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 
+                0 13px 0 #c4002d,
+                0 13px 40px rgba(254, 44, 85, 0.7);
+        }
+
+        .cta-button:hover::before {
+            transform: translateX(100%);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+            box-shadow: 
+                0 5px 0 #c4002d,
+                0 5px 20px rgba(254, 44, 85, 0.5);
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, var(--tiktok-black) 0%, #0a0a0a 100%);
+            position: relative;
+        }
+
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--tiktok-cyan), var(--tiktok-red), var(--tiktok-cyan));
+        }
+
+        .about-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(254, 44, 85, 0.3);
+            border-radius: 20px;
+            padding: 60px;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(37, 244, 238, 0.1) 0%, transparent 70%);
+            animation: floatUpDown 10s ease-in-out infinite;
+        }
+
+        .about-title {
+            font-size: clamp(36px, 4vw, 48px);
+            font-weight: 900;
+            background: linear-gradient(90deg, var(--tiktok-cyan), var(--tiktok-red));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .about-description {
+            color: var(--tiktok-white);
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .about-highlight {
+            background: linear-gradient(135deg, var(--tiktok-red), var(--tiktok-pink));
+            color: white;
+            padding: 20px 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+            font-size: 20px;
+            font-weight: 700;
+            box-shadow: 0 10px 30px rgba(254, 44, 85, 0.3);
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(37, 244, 238, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--tiktok-cyan), var(--tiktok-red));
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 40px rgba(37, 244, 238, 0.2);
+        }
+
+        .feature-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--tiktok-red), var(--tiktok-pink));
+            border-radius: 50%;
+            color: white;
+            font-size: 24px;
+            font-weight: 900;
+            line-height: 50px;
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            color: var(--tiktok-cyan);
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .feature-description {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Service Grid */
+        .service-section {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            max-width: 1100px;
+            margin: 50px auto 0;
+        }
+
+        .service-item {
+            background: linear-gradient(135deg, rgba(254, 44, 85, 0.1), rgba(37, 244, 238, 0.1));
+            border: 2px solid rgba(254, 44, 85, 0.3);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: scale(1.05);
+            border-color: var(--tiktok-cyan);
+            box-shadow: 0 20px 50px rgba(37, 244, 238, 0.3);
+        }
+
+        .service-title {
+            color: var(--tiktok-red);
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--tiktok-cyan);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-list {
+            color: rgba(255, 255, 255, 0.9);
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .service-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--tiktok-cyan);
+            font-weight: bold;
+        }
+
+        /* Growth Steps */
+        .growth-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #0a0a0a, var(--tiktok-black));
+        }
+
+        .growth-section-title {
+            font-size: clamp(40px, 5vw, 64px);
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 80px;
+            color: var(--tiktok-white);
+            position: relative;
+        }
+
+        .growth-timeline {
+            max-width: 900px;
+            margin: 50px auto 0;
+            position: relative;
+        }
+
+        .growth-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--tiktok-cyan), var(--tiktok-red));
+            transform: translateX(-50%);
+        }
+
+        .growth-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            position: relative;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .growth-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .growth-content {
+            flex: 1;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border: 2px solid rgba(37, 244, 238, 0.3);
+        }
+
+        .growth-day {
+            color: var(--tiktok-cyan);
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .growth-title {
+            color: white;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .growth-description {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .growth-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: var(--tiktok-red);
+            border: 4px solid var(--tiktok-black);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        /* Instructor Section - Improved */
+        .instructor-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, var(--tiktok-black) 0%, #1a1a1a 100%);
+            position: relative;
+        }
+
+        .instructor-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100'%3E%3Cpath fill='%23000000' d='M0,0 L1440,0 L1440,50 L720,100 L0,50 Z'/%3E%3C/svg%3E");
+        }
+
+        .instructor-card {
+            background: var(--tiktok-white);
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            box-shadow: 
+                -20px -20px 0 var(--tiktok-cyan),
+                20px 20px 0 var(--tiktok-red),
+                0 0 100px rgba(0,0,0,0.3);
+            padding: 60px;
+            border-radius: 20px;
+        }
+
+        .instructor-header {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .instructor-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--tiktok-red), var(--tiktok-pink));
+            color: var(--tiktok-white);
+            padding: 8px 20px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(254, 44, 85, 0.3);
+        }
+
+        .instructor-main-title {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 900;
+            color: var(--tiktok-black);
+            margin-bottom: 15px;
+        }
+
+        .instructor-subtitle {
+            font-size: 20px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .instructor-highlight-text {
+            font-size: 18px;
+            color: var(--tiktok-red);
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        .ambassador-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .ambassador-card {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            border-radius: 15px;
+            padding: 30px;
+            position: relative;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        .ambassador-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--tiktok-cyan);
+            box-shadow: 0 20px 40px rgba(37, 244, 238, 0.2);
+        }
+
+        .ambassador-icon {
+            font-size: 36px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .ambassador-role {
+            color: var(--tiktok-red);
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .ambassador-achievements {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .ambassador-achievements li {
+            color: #333;
+            font-size: 14px;
+            line-height: 1.8;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .ambassador-achievements li::before {
+            content: '✨';
+            position: absolute;
+            left: 0;
+            color: var(--tiktok-cyan);
+        }
+
+        .ambassador-achievements li:last-child {
+            border-bottom: none;
+        }
+
+        .ambassador-tag {
+            display: inline-block;
+            background: rgba(254, 44, 85, 0.1);
+            color: var(--tiktok-red);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        .instructor-footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 2px solid #eee;
+        }
+
+        .instructor-footer-text {
+            font-size: 20px;
+            color: #333;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .instructor-footer-sub {
+            font-size: 16px;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 100px 0;
+            background: var(--tiktok-white);
+            position: relative;
+        }
+
+        .benefits-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 100px,
+                    rgba(254, 44, 85, 0.03) 100px,
+                    rgba(254, 44, 85, 0.03) 200px
+                );
+        }
+
+        .section-title {
+            font-size: clamp(40px, 5vw, 64px);
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 80px;
+            color: var(--tiktok-black);
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .benefit-card {
+            background: var(--tiktok-black);
+            padding: 50px 30px;
+            position: relative;
+            transition: all 0.3s ease;
+            border: 3px solid var(--tiktok-black);
+            border-radius: 20px;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(45deg, 
+                var(--tiktok-red), 
+                var(--tiktok-cyan), 
+                var(--tiktok-red));
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 20px;
+        }
+
+        .benefit-card:hover::before {
+            opacity: 1;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+        }
+
+        .benefit-card:nth-child(1) {
+            border-top: 5px solid var(--tiktok-red);
+        }
+
+        .benefit-card:nth-child(2) {
+            border-top: 5px solid var(--tiktok-cyan);
+        }
+
+        .benefit-card:nth-child(3) {
+            border-top: 5px solid var(--tiktok-pink);
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 30px;
+            background: linear-gradient(135deg, var(--tiktok-red), var(--tiktok-pink));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(45deg);
+            box-shadow: 0 10px 30px rgba(254, 44, 85, 0.3);
+        }
+
+        .benefit-icon svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--tiktok-white);
+            stroke-width: 3;
+            transform: rotate(-45deg);
+        }
+
+        .benefit-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--tiktok-white);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .benefit-text {
+            color: rgba(255,255,255,0.8);
+            text-align: center;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .benefit-note {
+            color: var(--tiktok-cyan);
+            font-size: 14px;
+            margin-top: 15px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* Student Voices Section - NEW */
+        .voices-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--tiktok-red), var(--tiktok-pink));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .voices-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 20px,
+                rgba(255,255,255,0.03) 20px,
+                rgba(255,255,255,0.03) 40px
+            );
+            animation: slideInLeft 20s linear infinite;
+        }
+
+        .voices-title {
+            font-size: clamp(36px, 4vw, 48px);
+            font-weight: 900;
+            color: var(--tiktok-white);
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .voices-subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 20px;
+            margin-bottom: 60px;
+            font-weight: 600;
+        }
+
+        .student-cards-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        .student-card {
+            background: var(--tiktok-white);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease-out;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .student-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .student-header {
+            background: linear-gradient(135deg, var(--tiktok-black), #1a1a1a);
+            padding: 30px;
+            position: relative;
+        }
+
+        .student-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--tiktok-cyan);
+            color: var(--tiktok-black);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .student-avatar {
+            width: 80px;
+            height: 80px;
+            background: var(--tiktok-white);
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .student-name {
+            color: var(--tiktok-white);
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .student-role {
+            color: rgba(255,255,255,0.8);
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .student-content {
+            padding: 30px;
+            background: var(--tiktok-white);
+        }
+
+        .student-voice {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            border-left: 4px solid var(--tiktok-red);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            position: relative;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .student-voice::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            font-size: 48px;
+            color: var(--tiktok-red);
+            opacity: 0.2;
+        }
+
+        .voice-text {
+            color: #333;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .achievement-section {
+            margin-top: 25px;
+        }
+
+        .achievement-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--tiktok-black);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .achievement-icon {
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, var(--tiktok-red), var(--tiktok-pink));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+        }
+
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .ba-box {
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .before-box {
+            background: #ffebee;
+            border: 2px solid #ffcdd2;
+        }
+
+        .after-box {
+            background: #e8f5e9;
+            border: 2px solid #c8e6c9;
+        }
+
+        .ba-label {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .before-box .ba-label {
+            color: #c62828;
+        }
+
+        .after-box .ba-label {
+            color: #2e7d32;
+        }
+
+        .ba-content {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .achievement-highlight {
+            background: linear-gradient(135deg, var(--tiktok-red), var(--tiktok-pink));
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 18px;
+            animation: glow 2s infinite;
+        }
+
+        /* Campaign Section */
+        .campaign-section {
+            padding: 100px 0;
+            background: var(--tiktok-black);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .campaign-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 50%, rgba(254, 44, 85, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 50%, rgba(37, 244, 238, 0.1) 0%, transparent 50%);
+        }
+
+        .campaign-card {
+            background: var(--tiktok-white);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 60px;
+            position: relative;
+            box-shadow: 
+                -20px -20px 0 rgba(37, 244, 238, 0.5),
+                20px 20px 0 rgba(254, 44, 85, 0.5),
+                0 0 100px rgba(0,0,0,0.2);
+            border-radius: 20px;
+        }
+
+        .campaign-badge {
+            position: absolute;
+            top: -30px;
+            right: 40px;
+            background: var(--tiktok-cyan);
+            color: var(--tiktok-black);
+            padding: 15px 30px;
+            font-weight: 900;
+            font-size: 18px;
+            transform: rotate(-5deg);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            animation: blink 2s infinite;
+        }
+
+        .campaign-limited {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: var(--tiktok-black);
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-weight: 900;
+            font-size: 24px;
+            margin: 0 auto 30px;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.5);
+            animation: floatUpDown 2s ease-in-out infinite;
+        }
+
+        .campaign-title {
+            font-size: clamp(20px, 2.5vw, 28px);
+            font-weight: 700;
+            color: var(--tiktok-black);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .campaign-highlight-box {
+            background: linear-gradient(135deg, var(--tiktok-black), #1a1a1a);
+            padding: 40px;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .campaign-highlight-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(37, 244, 238, 0.3), 
+                transparent);
+            animation: slideInLeft 2s infinite;
+        }
+
+        .campaign-main-text {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 900;
+            color: var(--tiktok-white);
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 
+                2px 2px 0 var(--tiktok-red),
+                -2px -2px 0 var(--tiktok-cyan);
+        }
+
+        .campaign-sub-text {
+            font-size: clamp(20px, 2.5vw, 28px);
+            font-weight: 700;
+            color: var(--tiktok-white);
+            text-align: center;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #0a0a0a, var(--tiktok-black));
+            position: relative;
+        }
+
+        .features-title {
+            color: var(--tiktok-white);
+        }
+
+        .features-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            background: linear-gradient(135deg, #1a1a1a, var(--tiktok-black));
+            border-left: 5px solid var(--tiktok-red);
+            padding: 25px 30px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .feature-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(254, 44, 85, 0.1), 
+                transparent);
+            transition: left 0.5s ease;
+        }
+
+        .feature-item:hover::before {
+            left: 100%;
+        }
+
+        .feature-item:hover {
+            transform: translateX(10px);
+            border-left-color: var(--tiktok-cyan);
+            box-shadow: 
+                -10px 0 30px rgba(37, 244, 238, 0.3),
+                0 0 30px rgba(254, 44, 85, 0.2);
+        }
+
+        .feature-check {
+            width: 50px;
+            height: 50px;
+            background: var(--tiktok-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .feature-check svg {
+            width: 28px;
+            height: 28px;
+            stroke: var(--tiktok-white);
+            stroke-width: 4;
+        }
+
+        .feature-text {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--tiktok-white);
+        }
+
+        /* Final CTA Section */
+        .final-cta-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, 
+                var(--tiktok-black) 0%, 
+                #1a1a1a 50%, 
+                var(--tiktok-black) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, 
+                rgba(254, 44, 85, 0.1) 0%, 
+                transparent 70%);
+            animation: floatUpDown 5s ease-in-out infinite;
+        }
+
+        .final-cta-card {
+            background: var(--tiktok-white);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 60px;
+            text-align: center;
+            position: relative;
+            border: 5px solid var(--tiktok-black);
+            box-shadow: 
+                0 0 0 5px var(--tiktok-red),
+                0 0 0 10px var(--tiktok-white),
+                0 0 0 15px var(--tiktok-cyan),
+                0 30px 100px rgba(0,0,0,0.3);
+            border-radius: 30px;
+        }
+
+        .final-title {
+            font-size: clamp(48px, 6vw, 72px);
+            font-weight: 900;
+            color: var(--tiktok-black);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .final-title::after {
+            content: '!';
+            color: var(--tiktok-red);
+            font-size: 1.2em;
+        }
+
+        .final-subtitle {
+            font-size: clamp(24px, 3vw, 36px);
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 50px;
+        }
+
+        .final-cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            background: linear-gradient(135deg, var(--tiktok-red), var(--tiktok-pink));
+            color: var(--tiktok-white);
+            font-size: clamp(28px, 3.5vw, 40px);
+            font-weight: 900;
+            padding: 35px 70px;
+            text-decoration: none;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 4px solid var(--tiktok-black);
+            box-shadow: 
+                10px 10px 0 var(--tiktok-black),
+                10px 10px 60px rgba(254, 44, 85, 0.5);
+            transition: all 0.3s ease;
+            border-radius: 15px;
+        }
+
+        .final-cta-button:hover {
+            transform: translate(-5px, -5px);
+            box-shadow: 
+                15px 15px 0 var(--tiktok-black),
+                15px 15px 80px rgba(254, 44, 85, 0.7);
+        }
+
+        .response-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 40px;
+            padding: 15px 30px;
+            background: var(--tiktok-cyan);
+            color: var(--tiktok-black);
+            font-weight: 700;
+            font-size: 18px;
+            box-shadow: 0 10px 20px rgba(37, 244, 238, 0.3);
+            border-radius: 25px;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(180deg, #1a1a1a, var(--tiktok-black));
+            color: var(--tiktok-white);
+            padding: 80px 0 40px;
+            text-align: center;
+            border-top: 3px solid var(--tiktok-red);
+            position: relative;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .footer-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--tiktok-cyan);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--tiktok-cyan);
+        }
+
+        .footer-link:hover::after {
+            transform: scaleX(1);
+        }
+
+        .footer-brand {
+            font-size: 40px;
+            font-weight: 900;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, 
+                var(--tiktok-red), 
+                var(--tiktok-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-tagline {
+            color: rgba(255,255,255,0.6);
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .footer-copyright {
+            color: rgba(255,255,255,0.4);
+            font-size: 14px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .notification-bar {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            .floating-cta {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .floating-cta-button {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+
+            .title-box {
+                padding: 30px 40px;
+            }
+
+            .subtitle-box {
+                padding: 30px 20px;
+            }
+
+            .student-cards-container {
+                grid-template-columns: 1fr;
+            }
+
+            .before-after {
+                grid-template-columns: 1fr;
+            }
+
+            .instructor-card {
+                padding: 40px 20px;
+            }
+
+            .ambassador-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .campaign-card {
+                padding: 60px 30px;
+            }
+
+            .final-cta-card {
+                padding: 60px 30px;
+            }
+
+            .final-cta-button {
+                padding: 25px 40px;
+                font-size: clamp(20px, 3vw, 28px);
+            }
+
+            .method-tag {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .growth-item {
+                flex-direction: column !important;
+            }
+
+            .about-card {
+                padding: 40px 20px;
+            }
+
+            .stats-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .countdown-boxes {
+                gap: 10px;
+            }
+
+            .countdown-box {
+                min-width: 60px;
+                padding: 10px;
+            }
+
+            .countdown-number {
+                font-size: 24px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .trust-badges {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Notification Bar -->
+    <div class="notification-bar">
+        <span>🔥 期間限定！残り枠わずか - 今すぐ無料相談を予約 🔥</span>
+    </div>
+
+    <!-- Floating CTA Button -->
+    <div class="floating-cta">
+        <a href="https://lin.ee/7q8IJmw" class="floating-cta-button">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            今すぐ相談
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="hero-bg-pattern"></div>
+        <div class="container">
+            <div style="text-align: center;">
+                <!-- Main Title -->
+                <div class="main-title-wrapper">
+                    <div class="main-title">
+                        <div class="title-box">
+                            <h1 class="glitch-text">
+                                <span class="title-accent">＼ 国内初! 日本最大レベル ／</span>
+                                <span class="title-main">TikTok Shopコミュニティ</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <svg class="trust-badge-icon" viewBox="0 0 24 24">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                        </svg>
+                        満足度98%
+                    </div>
+                    <div class="trust-badge">
+                        <svg class="trust-badge-icon" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        安心サポート
+                    </div>
+                    <div class="trust-badge">
+                        <svg class="trust-badge-icon" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7L2 12C2 16.55 4.84 20.74 9 22.5C10.14 22.5 11.21 22.28 12.21 21.88C13.21 22.28 14.28 22.5 15.42 22.5C19.58 20.74 22.42 16.55 22.42 12L22.42 7L12 2Z"/>
+                        </svg>
+                        非公開案件
+                    </div>
+                </div>
+
+                <!-- Countdown Timer -->
+                <div class="countdown-container">
+                    <div class="countdown-title">⏰ 無料枠終了まで</div>
+                    <div class="countdown-boxes">
+                        <div class="countdown-box">
+                            <span class="countdown-number" id="days">00</span>
+                            <span class="countdown-label">日</span>
+                        </div>
+                        <div class="countdown-box">
+                            <span class="countdown-number" id="hours">00</span>
+                            <span class="countdown-label">時間</span>
+                        </div>
+                        <div class="countdown-box">
+                            <span class="countdown-number" id="minutes">00</span>
+                            <span class="countdown-label">分</span>
+                        </div>
+                        <div class="countdown-box">
+                            <span class="countdown-number" id="seconds">00</span>
+                            <span class="countdown-label">秒</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subtitle -->
+                <div class="subtitle-container">
+                    <div class="subtitle-box">
+                        <p class="subtitle-text">
+                            日本最大級TikTok Shopコミュニティを目指す！<br>
+                            TikTok Shopで<span class="highlight-red">副業収入</span>を実現！
+                        </p>
+                        <p class="subtitle-sub">
+                            稼ぐ方法を徹底的に学ぶ
+                        </p>
+                        <div class="subtitle-method">
+                            <span class="method-tag">ショート動画</span>
+                            <span class="method-tag">商品アフィリエイト</span>
+                            <span class="method-tag">ライブコマース販売</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Statistics -->
+                <div class="stats-container">
+                    <div class="stat-box">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">参加メンバー</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">50万円</div>
+                        <div class="stat-label">平均月収実績</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">満足度</div>
+                    </div>
+                </div>
+
+                <!-- Icons -->
+                <div class="icon-row">
+                    <div class="icon-wrapper">
+                        <div class="icon-circle">
+                            <svg fill="none" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="icon-wrapper">
+                        <div class="icon-circle">
+                            <svg fill="none" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="icon-wrapper">
+                        <div class="icon-circle">
+                            <svg fill="none" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Brand Name -->
+                <div class="brand-section">
+                    <div class="brand-wrapper">
+                        <div class="brand-box">
+                            <h2 class="brand-name">Social Seek</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="https://lin.ee/7q8IJmw" class="cta-button">
+                    <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    LINE追加で今すぐ無料相談
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Social Seek Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-card">
+                <h2 class="about-title">Social Seekとは</h2>
+                <p class="about-description">
+                    Social Seek（ソーシャルシーク）は、日本最大級を目指す<br>
+                    「ショート動画 × 商品アフィリエイト × ライブコマース（TikTok Shop）」の<br>
+                    実践コミュニティ兼、学習・案件マッチングのプラットフォームです。
+                </p>
+                <div class="about-highlight">
+                    "独学では再現しにくい"売上づくりを<br>
+                    教材 × コミュニティ × ツール × 案件のワンセットで支援
+                </div>
+                <div class="about-highlight" style="background: var(--gradient-gold); color: var(--tiktok-black);">
+                    期間限定：先着30名 無料開放<br>
+                    入会金＋1ヶ月分の月額 ¥0（体験枠が埋まり次第終了）
+                </div>
+
+                <!-- 3つの参加メリット -->
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-number">1</div>
+                        <h4 class="feature-title">再現性</h4>
+                        <p class="feature-description">
+                            勝ち台本・フック集・ライブ運営チェックリスト・「今週売れる商品」リストなど、<strong>"そのまま使える型"</strong>を毎週更新。初心者でも手順通りに進めれば収益化までの距離を短縮できます。
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-number">2</div>
+                        <h4 class="feature-title">スピード</h4>
+                        <p class="feature-description">
+                            コミュニティで、講師やプロのライバー等が即レス添削。企画→撮影→編集→投稿→計測→改善を週次で反復し、伸びる導線に絞り込みます。
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-number">3</div>
+                        <h4 class="feature-title">稼げる設計</h4>
+                        <p class="feature-description">
+                            クリエイターには高コミッション案件／＋コミッション（上乗せ）を、ブランドには成果報酬型の出品・配信支援を提供。マッチング～収益化まで一気通貫で支えます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Section -->
+    <section class="service-section">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">できること（提供価値の全体像）</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3 class="service-title">
+                        <div class="service-icon">📚</div>
+                        学習（Learn）
+                    </h3>
+                    <ul class="service-list">
+                        <li>A→Zカリキュラム：アカウント設計／ショート動画の型／ライブ運営／ストア設定／データ分析／収益化まで体系化</li>
+                        <li>週次ライブ講義 & Q&A：実演デモ／最新トレンド解説／"失敗→改善"の具体例共有</li>
+                        <li>台本・フック・OP～クロージング集：カテゴリ別にCTR・CVRの実績指標付き</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 class="service-title">
+                        <div class="service-icon">🚀</div>
+                        実践サポート（Do）
+                    </h3>
+                    <ul class="service-list">
+                        <li>動画・ライブの添削（サムネ／冒頭3秒／訴求軸／CTA）</li>
+                        <li>チェックリスト運用（撮影・編集・配信・コメント運用・アフター導線）</li>
+                        <li>"今週の勝ち商品"リスト（企画案・見せ方・想定コミッション付き）</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 class="service-title">
+                        <div class="service-icon">🤝</div>
+                        マッチング（Match）
+                    </h3>
+                    <ul class="service-list">
+                        <li>クリエイター⇄ブランドの両面マッチング</li>
+                        <li>＋コミッション案件や在庫連動のライブ特化案件を優先配信</li>
+                        <li>成果報酬設計・評価基準・再発注／長期化の仕組みづくり</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3 class="service-title">
+                        <div class="service-icon">⚡</div>
+                        ツール（Tools）
+                    </h3>
+                    <ul class="service-list">
+                        <li>トレンド商品ファインダー（β）</li>
+                        <li>フック／台本データベース（検索・コピーOK）</li>
+                        <li>パフォーマンス可視化シート（毎週の伸びを数値で管理）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Growth Steps Section -->
+    <section class="growth-section">
+        <div class="container">
+            <h2 class="growth-section-title">参加後の成長ステップ（90日プラン例）</h2>
+            <div class="growth-timeline">
+                <div class="growth-item">
+                    <div class="growth-content">
+                        <div class="growth-day">Day 1–7</div>
+                        <div class="growth-title">基礎構築</div>
+                        <div class="growth-description">
+                            アカウント設計／撮影・編集の型／初案件の獲得
+                        </div>
+                    </div>
+                    <div class="growth-dot"></div>
+                </div>
+
+                <div class="growth-item">
+                    <div class="growth-content">
+                        <div class="growth-day">Day 8–30</div>
+                        <div class="growth-title">検証回し</div>
+                        <div class="growth-description">
+                            台本→投稿→計測→添削→再投稿（週2–3本）
+                        </div>
+                    </div>
+                    <div class="growth-dot"></div>
+                </div>
+
+                <div class="growth-item">
+                    <div class="growth-content">
+                        <div class="growth-day">Day 31–60</div>
+                        <div class="growth-title">拡張</div>
+                        <div class="growth-description">
+                            ライブ導線を接続／＋コミッション案件に挑戦
+                        </div>
+                    </div>
+                    <div class="growth-dot"></div>
+                </div>
+
+                <div class="growth-item">
+                    <div class="growth-content">
+                        <div class="growth-day">Day 61–90</div>
+                        <div class="growth-title">安定化</div>
+                        <div class="growth-description">
+                            勝ちパターンの量産・コラボ配信・案件単価の引き上げ
+                        </div>
+                    </div>
+                    <div class="growth-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Improved Instructor Section -->
+    <section class="instructor-section">
+        <div class="container">
+            <div class="instructor-card">
+                <div class="instructor-header">
+                    <div class="instructor-badge">OFFICIAL AMBASSADORS</div>
+                    <h3 class="instructor-main-title">Social Seek アンバサダー紹介</h3>
+                    <p class="instructor-subtitle">
+                        SNSで"売る力"を持つ、次世代クリエイター集団
+                    </p>
+                    <p class="instructor-highlight-text">
+                        "売れるコンテンツ"を知り尽くしたメンバーが、あなたの成長をサポート
+                    </p>
+                </div>
+
+                <div class="ambassador-grid">
+                    <!-- Ambassador 1 -->
+                    <div class="ambassador-card">
+                        <div class="ambassador-icon">📱</div>
+                        <h4 class="ambassador-role">TikTok公認クリエイター／バズらせ屋</h4>
+                        <ul class="ambassador-achievements">
+                            <li>フォロワー32万人、24時間で10万人突破（国内最速）</li>
+                            <li>『最も売れてるTikTok本』（Amazon SNS部門1位）著者</li>
+                            <li>TikTok社「Z世代白書2023」掲載・公式イベント登壇</li>
+                            <li>独自のアルゴリズム分析とUGC設計で成果を出す</li>
+                        </ul>
+                        <span class="ambassador-tag">戦略家タイプ</span>
+                    </div>
+
+                    <!-- Ambassador 2 -->
+                    <div class="ambassador-card">
+                        <div class="ambassador-icon">🛍</div>
+                        <h4 class="ambassador-role">日本＆中国トップライブコマーサー</h4>
+                        <ul class="ambassador-achievements">
+                            <li>日中両市場でTikTok Shop・ライブ販売を展開</li>
+                            <li>ファッション・美容・コスメで累計販売数10万点以上</li>
+                            <li>現場型ノウハウを惜しみなく公開</li>
+                            <li>リアルタイムセールスのプロフェッショナル</li>
+                        </ul>
+                        <span class="ambassador-tag">売る現場のプロ</span>
+                    </div>
+
+                    <!-- Ambassador 3 -->
+                    <div class="ambassador-card">
+                        <div class="ambassador-icon">🎯</div>
+                        <h4 class="ambassador-role">SNSコンサルタント／プロデューサー</h4>
+                        <ul class="ambassador-achievements">
+                            <li>企業アカウント累計500件以上を支援</li>
+                            <li>3ヶ月でフォロワー2,000→200万達成事例あり</li>
+                            <li>SNS総再生3,000万回超の実績</li>
+                            <li>データドリブンな成長戦略を提供</li>
+                        </ul>
+                        <span class="ambassador-tag">伸ばす専門家</span>
+                    </div>
+
+                    <!-- Ambassador 4 -->
+                    <div class="ambassador-card">
+                        <div class="ambassador-icon">💬</div>
+                        <h4 class="ambassador-role">Live Commerce クリエイター／教育担当</h4>
+                        <ul class="ambassador-achievements">
+                            <li>SocialSeekの教育講師として活躍</li>
+                            <li>初心者でも"売れる配信台本"を徹底レクチャー</li>
+                            <li>ライブ配信で月商100万円突破の実績</li>
+                            <li>実践的な指導で成果にコミット</li>
+                        </ul>
+                        <span class="ambassador-tag">教えるプロ</span>
+                    </div>
+                </div>
+
+                <div class="instructor-footer">
+                    <p class="instructor-footer-text">
+                        こうしたアンバサダーたちがあなたを直接サポート
+                    </p>
+                    <p class="instructor-footer-sub">
+                        クリエイターの成長を加速させる"リアルな学びとチャンス"がここにあります
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">メンバー特典</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">初回配布特典</h3>
+                    <p class="benefit-text">
+                        勝ち台本50本／フック200本／チェックリストを初回配布
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">週次更新コンテンツ</h3>
+                    <p class="benefit-text">
+                        勝ち商品＆注力度"見取り図"（訴求軸・想定CVRコメント付き）
+                    </p>
+                    <p class="benefit-note">
+                        ※個人差によっては収益は変わります<br>
+                        ※海外事例：月100万円収入を得ている事例もある
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">優先サポート</h3>
+                    <p class="benefit-text">
+                        優先マッチング枠：＋コミッション案件／ライブ特化案件<br>
+                        講師＆先輩の個別FB枠（先着・予約制）
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Voices Section - MOVED HERE -->
+    <section class="voices-section">
+        <div class="container">
+            <h2 class="voices-title">🎉 受講生のリアルな成功ストーリー</h2>
+            <p class="voices-subtitle">Social Seekで人生が変わった！月収100万円達成者続出</p>
+
+            <div class="student-cards-container">
+                <!-- Student 1 -->
+                <div class="student-card">
+                    <div class="student-header">
+                        <div class="student-badge">3ヶ月で30万人突破</div>
+                        <div class="student-avatar">🎯</div>
+                        <h3 class="student-name">Y.K さん（28歳）</h3>
+                        <p class="student-role">元会社員 → TikTokクリエイター</p>
+                    </div>
+                    <div class="student-content">
+                        <div class="student-voice">
+                            <p class="voice-text">
+                                「30万人おめでとう！停滞してたところから、よく頑張ったね！」<br><br>
+                                Social Seekに入会して3ヶ月、まさか自分が3ヶ月で30万人フォロワーを達成できるなんて思ってもいませんでした。最初は会社員をしながらの副業でしたが、今では本業の収入を超えています。
+                            </p>
+                        </div>
+                        <div class="achievement-section">
+                            <div class="achievement-title">
+                                <span class="achievement-icon">✨</span>
+                                成長ストーリー
+                            </div>
+                            <div class="before-after">
+                                <div class="ba-box before-box">
+                                    <p class="ba-label">Before</p>
+                                    <p class="ba-content">
+                                        フォロワー1,000人<br>
+                                        月収：会社員給料のみ<br>
+                                        動画再生数：平均1,000回
+                                    </p>
+                                </div>
+                                <div class="ba-box after-box">
+                                    <p class="ba-label">After</p>
+                                    <p class="ba-content">
+                                        フォロワー30万人<br>
+                                        月収：80万円超<br>
+                                        動画再生数：平均50万回
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="achievement-highlight">
+                                🎯 3ヶ月で人生が激変！
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student 2 -->
+                <div class="student-card">
+                    <div class="student-header">
+                        <div class="student-badge">月収100万円達成</div>
+                        <div class="student-avatar">💎</div>
+                        <h3 class="student-name">M.S さん（32歳）</h3>
+                        <p class="student-role">主婦 → ライブコマーサー</p>
+                    </div>
+                    <div class="student-content">
+                        <div class="student-voice">
+                            <p class="voice-text">
+                                「子育てしながらでも、隙間時間で月収100万円を達成できました！」<br><br>
+                                最初は半信半疑でしたが、講師の方々の手厚いサポートと、実践的なカリキュラムのおかげで、着実に成果を出すことができました。家族との時間も大切にしながら収入を得られるなんて夢のようです。
+                            </p>
+                        </div>
+                        <div class="achievement-section">
+                            <div class="achievement-title">
+                                <span class="achievement-icon">📈</span>
+                                収益化の軌跡
+                            </div>
+                            <div class="before-after">
+                                <div class="ba-box before-box">
+                                    <p class="ba-label">Before</p>
+                                    <p class="ba-content">
+                                        収入：0円<br>
+                                        ライブ経験：なし<br>
+                                        SNS運用：未経験
+                                    </p>
+                                </div>
+                                <div class="ba-box after-box">
+                                    <p class="ba-label">After</p>
+                                    <p class="ba-content">
+                                        月収：100万円<br>
+                                        ライブ視聴者：平均5,000人<br>
+                                        商品成約率：15%
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="achievement-highlight">
+                                💰 在宅で月収100万円実現！
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student 3 -->
+                <div class="student-card">
+                    <div class="student-header">
+                        <div class="student-badge">企業案件獲得</div>
+                        <div class="student-avatar">🚀</div>
+                        <h3 class="student-name">T.H さん（25歳）</h3>
+                        <p class="student-role">フリーター → インフルエンサー</p>
+                    </div>
+                    <div class="student-content">
+                        <div class="student-voice">
+                            <p class="voice-text">
+                                「まさか大手企業から案件をいただけるようになるとは...」<br><br>
+                                Social Seekで学んだマーケティング手法と、コミュニティの仲間たちとの情報交換のおかげで、今では複数の企業様から案件をいただいています。フリーター時代とは比べ物にならない生活です。
+                            </p>
+                        </div>
+                        <div class="achievement-section">
+                            <div class="achievement-title">
+                                <span class="achievement-icon">🌟</span>
+                                ビジネス成長
+                            </div>
+                            <div class="before-after">
+                                <div class="ba-box before-box">
+                                    <p class="ba-label">Before</p>
+                                    <p class="ba-content">
+                                        月収：15万円<br>
+                                        企業案件：0件<br>
+                                        将来の不安：大
+                                    </p>
+                                </div>
+                                <div class="ba-box after-box">
+                                    <p class="ba-label">After</p>
+                                    <p class="ba-content">
+                                        月収：80万円<br>
+                                        企業案件：月10件以上<br>
+                                        独立起業：達成
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="achievement-highlight">
+                                🎊 夢の独立を実現！
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student 4 -->
+                <div class="student-card">
+                    <div class="student-header">
+                        <div class="student-badge">SNS収益3倍</div>
+                        <div class="student-avatar">📱</div>
+                        <h3 class="student-name">A.N さん（35歳）</h3>
+                        <p class="student-role">飲食店経営 → SNSマーケター</p>
+                    </div>
+                    <div class="student-content">
+                        <div class="student-voice">
+                            <p class="voice-text">
+                                「店舗の集客だけでなく、SNSでの収益が本業を超えました」<br><br>
+                                元々は店舗の集客のためにSNSを始めましたが、Social Seekで学んだノウハウを活かしたところ、SNS単体での収益が飲食店の売上を超えるようになりました。今では両方で成功しています。
+                            </p>
+                        </div>
+                        <div class="achievement-section">
+                            <div class="achievement-title">
+                                <span class="achievement-icon">💪</span>
+                                ビジネス拡大
+                            </div>
+                            <div class="before-after">
+                                <div class="ba-box before-box">
+                                    <p class="ba-label">Before</p>
+                                    <p class="ba-content">
+                                        SNS収益：月5万円<br>
+                                        フォロワー：3,000人<br>
+                                        集客：口コミのみ
+                                    </p>
+                                </div>
+                                <div class="ba-box after-box">
+                                    <p class="ba-label">After</p>
+                                    <p class="ba-content">
+                                        SNS収益：月150万円<br>
+                                        フォロワー：15万人<br>
+                                        集客：予約3ヶ月待ち
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="achievement-highlight">
+                                📊 売上30倍達成！
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student 5 -->
+                <div class="student-card">
+                    <div class="student-header">
+                        <div class="student-badge">最速収益化</div>
+                        <div class="student-avatar">⚡</div>
+                        <h3 class="student-name">K.T さん（22歳）</h3>
+                        <p class="student-role">大学生 → 学生起業家</p>
+                    </div>
+                    <div class="student-content">
+                        <div class="student-voice">
+                            <p class="voice-text">
+                                「入会2週間で初収益！学生でもここまでできるんです」<br><br>
+                                大学の授業と両立しながら、Social Seekのカリキュラムを実践。わずか2週間で初収益を達成し、今では同世代の会社員以上の収入を得ています。就活する必要がなくなりました！
+                            </p>
+                        </div>
+                        <div class="achievement-section">
+                            <div class="achievement-title">
+                                <span class="achievement-icon">🎓</span>
+                                学生起業の成功
+                            </div>
+                            <div class="before-after">
+                                <div class="ba-box before-box">
+                                    <p class="ba-label">Before</p>
+                                    <p class="ba-content">
+                                        収入：バイト代8万円<br>
+                                        将来：就活に不安<br>
+                                        スキル：特になし
+                                    </p>
+                                </div>
+                                <div class="ba-box after-box">
+                                    <p class="ba-label">After</p>
+                                    <p class="ba-content">
+                                        月収：45万円<br>
+                                        将来：起業準備中<br>
+                                        スキル：マーケティング習得
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="achievement-highlight">
+                                🌟 2週間で人生が変わった！
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student 6 -->
+                <div class="student-card">
+                    <div class="student-header">
+                        <div class="student-badge">海外進出成功</div>
+                        <div class="student-avatar">🌏</div>
+                        <h3 class="student-name">R.M さん（40歳）</h3>
+                        <p class="student-role">元営業職 → グローバルクリエイター</p>
+                    </div>
+                    <div class="student-content">
+                        <div class="student-voice">
+                            <p class="voice-text">
+                                「日本だけでなく、アジア全体で活動できるようになりました」<br><br>
+                                Social Seekで学んだTikTok Shopの知識を活かし、現在は東南アジア市場でも活動しています。言語の壁を越えて、月収200万円を達成。人生の可能性が無限に広がりました。
+                            </p>
+                        </div>
+                        <div class="achievement-section">
+                            <div class="achievement-title">
+                                <span class="achievement-icon">🌍</span>
+                                グローバル展開
+                            </div>
+                            <div class="before-after">
+                                <div class="ba-box before-box">
+                                    <p class="ba-label">Before</p>
+                                    <p class="ba-content">
+                                        活動範囲：日本のみ<br>
+                                        月収：営業職30万円<br>
+                                        将来性：限定的
+                                    </p>
+                                </div>
+                                <div class="ba-box after-box">
+                                    <p class="ba-label">After</p>
+                                    <p class="ba-content">
+                                        活動範囲：アジア5カ国<br>
+                                        月収：200万円<br>
+                                        将来性：無限大
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="achievement-highlight">
+                                🚀 世界で活躍中！
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campaign Section -->
+    <section class="campaign-section">
+        <div class="container">
+            <div class="campaign-card">
+                <div class="campaign-badge">期間限定</div>
+                <div style="text-align: center;">
+                    <div class="campaign-limited">期間限定！30名枠のみ</div>
+                </div>
+                <p class="campaign-title">リンクから個別相談会で今だけ</p>
+                <div class="campaign-highlight-box">
+                    <p class="campaign-main-text">完全無料開放！</p>
+                    <p class="campaign-sub-text">入会料と月額費用1ヶ月分が¥0</p>
+                </div>
+                <a href="https://lin.ee/7q8IJmw" target="_blank" rel="noopener noreferrer" class="cta-button" style="margin: 0 auto;">
+                    <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    今すぐLINE追加して特典をゲット
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title features-title">こんな方におすすめ</h2>
+            <div class="features-list">
+                <div class="feature-item">
+                    <div class="feature-check">
+                        <svg fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <p class="feature-text">副業で月数万円～を安定化したい未経験者</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-check">
+                        <svg fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <p class="feature-text">ショート動画の伸びが頭打ちで次の打ち手が欲しい中級者</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-check">
+                        <svg fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <p class="feature-text">ライブ配信で売上を積み上げたいホスト／MC</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-check">
+                        <svg fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <p class="feature-text">自社商品の販売チャネルを拡大したいブランド・メーカー・EC事業者</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-check">
+                        <svg fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <p class="feature-text">SNSマーケティングを学びたい</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-check">
+                        <svg fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <p class="feature-text">実績あるプロから直接学びたい</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="contact" class="final-cta-section">
+        <div class="container">
+            <div class="final-cta-card">
+                <h2 class="final-title">今すぐ始めよう</h2>
+                <p class="final-subtitle">あなたのSNS副業成功への第一歩</p>
+                
+                <div style="margin-bottom: 50px;">
+                    <p style="font-size: 24px; font-weight: 700; color: #333; margin-bottom: 10px;">
+                        無料相談実施中
+                    </p>
+                    <p style="font-size: 18px; color: #666;">
+                        LINEで気軽にお問い合わせください
+                    </p>
+                </div>
+
+                <a href="https://lin.ee/7q8IJmw" target="_blank" rel="noopener noreferrer" class="final-cta-button">
+                    <svg width="48" height="48" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    LINE追加はこちら
+                </a>
+
+                <div class="response-badge">
+                    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    24時間以内に返信します
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3 class="footer-brand">Social Seek</h3>
+            <p class="footer-tagline">TikTok Shop × アフィリエイト × ライブコマース</p>
+            
+            <div class="footer-links">
+                <a href="https://docs.google.com/document/d/1ThUv4i6IZAFnIm1KVdzM6IwwMgQGsLkbzXSVRd4oIYc/edit?tab=t.0" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="footer-link">
+                    特定商取引法に基づく表記
+                </a>
+                <a href="https://docs.google.com/document/d/15muS0wZnUJxB6JrUymYM5WuF41pDRWltZs-rX5DkEsg/edit?tab=t.0" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="footer-link">
+                    プライバシーポリシー
+                </a>
+                <a href="https://lin.ee/7q8IJmw" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="footer-link">
+                    お問い合わせ
+                </a>
+            </div>
+            
+            <p class="footer-copyright">© 2024 Social Seek. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const endDate = new Date();
+            endDate.setDate(endDate.getDate() + 7); // 7日後に設定
+            
+            const now = new Date();
+            const timeLeft = endDate - now;
+            
+            if (timeLeft > 0) {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                
+                document.getElementById('days').textContent = String(days).padStart(2, '0');
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            }
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Scroll Animation for Student Cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.student-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease-out';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
