@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Social Seek - 日本最大級TikTok Shopコミュニティ。ショート動画×商品アフィリエイト×ライブコマースで副業収入を実現">
-    <meta property="og:title" content="Social Seek - 国内初! 日本最大レベル TikTok Shopコミュニティ">
+    <meta property="og:title" content="Social Seek - 国内初! 日本最大規模 TikTok Shop審査制コミュニティ">
     <meta property="og:description" content="TikTok Shopで副業収入を実現！期間限定30名枠のみ完全無料開放中">
     <meta property="og:image" content="https://socialseek.jp/ogp-image.jpg">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="google-site-verification" content="qWr2DpupdbZe0Uf_rnK5GDncSGxRHGAtcWvPhEFwoHE" />
-    <title>Social Seek - 国内初! 日本最大レベル TikTok Shopコミュニティ</title>
+    <title>Social Seek - 国内初! 日本最大規模 TikTok Shop審査制コミュニティ</title>
     <style>
         * {
             margin: 0;
@@ -2576,7 +2576,7 @@
         <div class="diagnosis-popup">
             <div class="diagnosis-header">
                 <div class="diagnosis-close" id="diagnosisClose"></div>
-                <h2 class="diagnosis-title">TikTok Shop タイプ診断</h2>
+                <h2 class="diagnosis-title">TikTok Shop 副業タイプ診断</h2>
                 <p class="diagnosis-subtitle">ライブコマーサー or クリエイター</p>
             </div>
             <div class="diagnosis-content">
@@ -2796,41 +2796,7 @@
                             </ul>
                         </div>
                     </div>
-                    
-                    <div class="starter-plan">
-                        <div class="starter-title">🚀 7日間スタータープラン</div>
-                        <div class="starter-days">
-                            <div class="starter-day">
-                                <div class="day-number">Day 1</div>
-                                <div class="day-task">30秒レビュー台本3型（結論先出し／比較／検証）</div>
-                            </div>
-                            <div class="starter-day">
-                                <div class="day-number">Day 2</div>
-                                <div class="day-task">手元・俯瞰の撮影セット固定</div>
-                            </div>
-                            <div class="starter-day">
-                                <div class="day-number">Day 3</div>
-                                <div class="day-task">ナレーション辞書（効果→根拠→使い方）</div>
-                            </div>
-                            <div class="starter-day">
-                                <div class="day-number">Day 4</div>
-                                <div class="day-task">テロップの統一プリセット作成</div>
-                            </div>
-                            <div class="starter-day">
-                                <div class="day-number">Day 5</div>
-                                <div class="day-task">1商品あたり3バリエーション量産</div>
-                            </div>
-                            <div class="starter-day">
-                                <div class="day-number">Day 6</div>
-                                <div class="day-task">5件のコラボ募集DMテンプレ送付</div>
-                            </div>
-                            <div class="starter-day">
-                                <div class="day-number">Day 7</div>
-                                <div class="day-task">成果指標表（再生3秒率・保存率・商品タップ率）</div>
-                            </div>
-                        </div>
-                    </div>
-                    
+                                       
                     <button onclick="goToLine()" class="result-cta">
                         レビュー台本・プリセットを受け取る
                     </button>
@@ -2857,8 +2823,8 @@
                     <div class="main-title">
                         <div class="title-box">
                             <h1 class="glitch-text">
-                                <span class="title-accent">＼ 国内初! 日本最大レベル ／</span>
-                                <span class="title-main">TikTok Shopコミュニティ</span>
+                                <span class="title-accent">＼ 国内初! 日本最大規模 ／</span>
+                                <span class="title-main">TikTok Shop審査制コミュニティ</span>
                             </h1>
                         </div>
                     </div>
@@ -2913,7 +2879,7 @@
                 <div class="subtitle-container">
                     <div class="subtitle-box">
                         <p class="subtitle-text">
-                            日本最大級TikTok Shopコミュニティを目指す！<br>
+                            日本最大規模TikTok Shop審査制コミュニティを目指す！<br>
                             TikTok Shopで<span class="highlight-red">副業収入</span>を実現！
                         </p>
                         <p class="subtitle-sub">
@@ -2934,8 +2900,8 @@
                         <div class="stat-label">参加メンバー</div>
                     </div>
                     <div class="stat-box">
-                        <div class="stat-number">50万円</div>
-                        <div class="stat-label">平均月収実績</div>
+                        <div class="stat-number">100万円</div>
+                        <div class="stat-label">最高月収実績</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-number">98%</div>
